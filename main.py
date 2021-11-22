@@ -8,13 +8,15 @@ t.hideturtle()
 
 screen = Screen()
 screen.setup(width=800, height=600)
-screen.bgcolor('yellow')
+screen.bgcolor(206.0/255, 0.0/255, 0.0/255)
 screen.title('PYmodoro')
 screen.tracer(0)
 
 
 t.clear()
 t.goto(0, 250)
+t.color('white')
+t.clear()
 t.write('PYmodoro', align='center', font=('Comic Sans MS', 30, 'normal'))
 
 relogio = Relogio()

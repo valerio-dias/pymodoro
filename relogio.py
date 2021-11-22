@@ -7,7 +7,7 @@ from turtle import Turtle
 class Relogio(Turtle):
     def __init__(self):
         super().__init__()
-        self.color('black')
+        self.color('white')
         self.penup()
         self.hideturtle()
         self.time_screen = 25
