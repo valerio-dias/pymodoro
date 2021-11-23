@@ -24,7 +24,7 @@ t.goto(0, -250)
 t.color('white')
 t.write('Bom estudo.', align='center', font=('Comic Sans MS', 15, 'normal'))
 
-iniciar = screen.textinput(title="Início", prompt="Escolha quantos minutos (25/30/45/57:")
+iniciar = screen.textinput(title="Início", prompt="Escolha quantos minutos (25/30/45/57):")
 
 int_ini = int(iniciar) * 60
 relogio = Relogio(int_ini)
