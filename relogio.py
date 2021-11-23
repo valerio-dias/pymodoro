@@ -1,5 +1,4 @@
-from datetime import datetime, timedelta
-from sys import stdout
+from datetime import timedelta
 from time import sleep
 from turtle import Turtle
 
@@ -21,7 +20,7 @@ class Relogio(Turtle):
             sleep(1)
             self.update_tela()
             self.tempo = self.tempo - timedelta(seconds=1)
-            # self.update_tela()
+            
 
     def update_tela(self):
         self.clear()
