@@ -43,7 +43,6 @@ while continua == 's':
         intervalo = screen.textinput(title="Intervalo",  prompt="Intrvalo errado! Escolha quantos minutos de intervalo (5/15/30) ou tecle n para encerrar:")
     int_int = int(intervalo) * 60
     relogio.update_tela()
-    # int_ini = int_ini * 5
     relogio.timer(int_int)
     relogio.update_tela()
     elephant.play()
