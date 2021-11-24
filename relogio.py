@@ -2,7 +2,6 @@ from datetime import timedelta
 from time import sleep
 from turtle import Turtle
 
-
 class Relogio(Turtle):
     def __init__(self, segundos):
         super().__init__()
@@ -17,9 +16,16 @@ class Relogio(Turtle):
     def timer(self):
         self.tempo = timedelta(seconds=self.segundos)
         while str(self.tempo) != '0:00:00':
-            sleep(1)
             self.update_tela()
             self.tempo = self.tempo - timedelta(seconds=1)
+            sleep(1)
+
+    def break_time(self, segundos):
+        self.tempo = timedelta(seconds=segundos)
+        while str(self.tempo) != '0:00:00':
+            self.update_tela()
+            self.tempo = self.tempo - timedelta(seconds=1)
+            sleep(1)
 
     def update_tela(self):
         self.clear()
