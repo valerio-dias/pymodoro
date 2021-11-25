@@ -30,24 +30,31 @@ continua = 's'
 
 relogio = Relogio()
 while continua == 's':
-    iniciar = screen.textinput(title="Tempo", prompt="Escolha quantos minutos (25/30/45/50:")
-    if iniciar != 25 or 30 or 45 or 50:
-        iniciar = screen.textinput(title="Tempo", prompt="Tempo errado! Escolha quantos minutos (25/30/45/50:")
+    iniciar = screen.textinput(title="Tempo", prompt="Escolha quantos minutos (sugestão: 25/30/45/50):")
     int_ini = int(iniciar) * 60
+    screen.bgcolor(188.0 / 255, 71.0 / 255, 73.0 / 255)
     relogio.timer(int_ini)
     ring.play()
     relogio.update_tela()
 
-    intervalo = screen.textinput(title="Intervalo", prompt="Escolha quantos minutos de intervalo (5/15/30) ou tecle n para encerrar:")
-    if intervalo != 5 or 15 or 30:
-        intervalo = screen.textinput(title="Intervalo",  prompt="Intrvalo errado! Escolha quantos minutos de intervalo (5/15/30) ou tecle n para encerrar:")
+    intervalo = screen.textinput(title="Intervalo", prompt="Escolha quantos minutos de intervalo (sugestão: 5/15/30) ou tecle qualquer tecla para encerrar:")
     int_int = int(intervalo) * 60
     relogio.update_tela()
+    t.clear()
+    t.goto(0, 250)
+    t.color('white')
+    t.clear()
+    t.write('PYmodoro', align='center', font=('Comic Sans MS', 30, 'normal'))
+    t.goto(0, -250)
+    t.color('white')
+    t.write('Hora de levantar e beber uma água.', align='center', font=('Comic Sans MS', 15, 'normal'))
+    screen.bgcolor(29.0 / 255, 53.0 / 255, 87.0 / 255)
     relogio.timer(int_int)
     relogio.update_tela()
     elephant.play()
 
-    continua = screen.textinput(title='Inicio/Continua', prompt='Continuar estudos(s/n)?')
+
+    continua = screen.textinput(title='Inicio/Continua', prompt='Tecle s para continuar os estudos')
 
     relogio.update_tela()
 
