@@ -32,6 +32,14 @@ relogio = Relogio()
 while continua == 's':
     iniciar = screen.textinput(title="Tempo", prompt="Escolha quantos minutos (sugestão: 25/30/45/50):")
     int_ini = int(iniciar) * 60
+    t.clear()
+    t.goto(0, 250)
+    t.color('white')
+    t.clear()
+    t.write('PYmodoro', align='center', font=('Comic Sans MS', 30, 'normal'))
+    t.goto(0, -250)
+    t.color('white')
+    t.write('Bom estudo.', align='center', font=('Comic Sans MS', 15, 'normal'))
     screen.bgcolor(188.0 / 255, 71.0 / 255, 73.0 / 255)
     relogio.timer(int_ini)
     ring.play()
@@ -57,5 +65,15 @@ while continua == 's':
     continua = screen.textinput(title='Inicio/Continua', prompt='Tecle s para continuar os estudos')
 
     relogio.update_tela()
+
+t.clear()
+t.goto(0, 150)
+t.color('white')
+t.clear()
+t.write('PYmodoro', align='center', font=('Comic Sans MS', 80, 'normal'))
+t.goto(0, -250)
+t.color('white')
+t.write('See u later!!!', align='center', font=('Comic Sans MS', 15, 'normal'))
+screen.bgcolor(0.0 / 255, 0.0 / 255, 15.0 / 255)
 
 screen.exitonclick()
