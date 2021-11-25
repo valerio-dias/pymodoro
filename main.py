@@ -67,10 +67,10 @@ while continua == 's':
     relogio.update_tela()
 
 t.clear()
-t.goto(0, 150)
+t.goto(0, 250)
 t.color('white')
 t.clear()
-t.write('PYmodoro', align='center', font=('Comic Sans MS', 80, 'normal'))
+t.write('PYmodoro', align='center', font=('Comic Sans MS', 30, 'normal'))
 t.goto(0, -250)
 t.color('white')
 t.write('See u later!!!', align='center', font=('Comic Sans MS', 15, 'normal'))
