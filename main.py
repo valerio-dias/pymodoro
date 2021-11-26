@@ -51,6 +51,6 @@ while continua == 's':
 
     relogio.update_tela()
 
-tela(0.0, 0.0, 15.0, 'See u later')
+tela(0.0, 0.0, 15.0, 'Até à próxima!')
 
 screen.exitonclick()
