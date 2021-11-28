@@ -25,7 +25,7 @@ def tela(r, g, b, mensagem):
     t.color('white')
     t.write(mensagem, align='center', font=('Comic Sans MS', 15, 'normal'))
 
-tela(188.0, 71.0, 73.0, 'Bom estudo')
+tela(188.0, 71.0, 73.0, 'Vamos começar?')
 
 continua = 's'
 
@@ -33,7 +33,7 @@ relogio = Relogio()
 while continua == 's':
     iniciar = screen.textinput(title="Tempo", prompt="Escolha quantos minutos (sugestão: 25/30/45/50):")
     int_ini = int(iniciar) * 60
-    tela(188.0, 71.0, 73.0, 'Bom estudo')
+    tela(45.0, 106.0, 79.0, 'Bom estudo')
     relogio.timer(int_ini)
     ring.play()
     relogio.update_tela()
