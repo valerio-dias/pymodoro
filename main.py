@@ -25,7 +25,7 @@ def tela(r, g, b, mensagem):
     t.color('white')
     t.write(mensagem, align='center', font=('Comic Sans MS', 15, 'normal'))
 
-tela(188.0, 71.0, 73.0, 'Vamos começar?')
+tela(29.0, 53.0, 87.0, 'Vamos começar?') 
 
 continua = 's'
 
@@ -41,7 +41,7 @@ while continua == 's':
     intervalo = screen.textinput(title="Intervalo", prompt="Escolha quantos minutos de intervalo (sugestão: 5/15/30) ou tecle qualquer tecla para encerrar:")
     int_int = int(intervalo) * 60
     relogio.update_tela()
-    tela(29.0, 53.0, 87.0, 'Hora de levantar e beber uma água')
+    tela(188.0, 71.0, 73.0, 'Hora de levantar e beber uma água')
 
     relogio.timer(int_int)
     relogio.update_tela()
@@ -53,4 +53,3 @@ while continua == 's':
 
 tela(0.0, 0.0, 15.0, 'Até à próxima!')
 
-screen.exitonclick()
